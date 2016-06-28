@@ -53,14 +53,7 @@ function playerPick(pick) {
   player.pick = pick; 
   computerPick();
   checkResult();
-  if ( (player.score >= 10) || (computer.score >=10) ) {
-  //log the result
-  if (player.score > computer.score) {
-    document.getElementById("roundResult").innerHTML = "player wins the game!";
-  } else {
-    document.getElementById("roundResult").innerHTML = "computer wins the game!";
-  }
-}
+  
 }
 
 // var x = Math.random()*3;
