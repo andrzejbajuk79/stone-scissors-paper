@@ -1,0 +1,64 @@
+*{
+	box-sizing: border-box;
+}
+.container {
+	margin: 0 auto;
+	width: 900px;
+	background: #99CCCC;
+	padding: 20px;
+
+}
+.button {
+	padding:5px 10px ;
+	font-size: 15px;
+	background: yellowgreen;
+	color: mediumblue;
+	border-radius: 5px;
+	margin:20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+.button:hover {
+	color: teal;
+	background: lime;
+}
+.pick-button {
+	visibility: hidden;
+}
+.result {
+	width: 50%;
+	margin: 0 auto;
+	}
+.result h3 {
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-bottom: -15px;
+}
+.result hr {
+	width: 100%;
+}
+.result p{
+	font-size: 20px;
+	line-height: 30px;
+}
+.score {
+	width: 50%;
+	margin: 0 auto;
+	text-align: centre;
+	;
+}
+.score h2 {
+	text-align: left;
+}
+hr {
+	width: 50%;
+}
+td {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.table h1 {
+	margin-bottom: -10px;
+}
