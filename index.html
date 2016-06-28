@@ -14,18 +14,13 @@
 
  <body id = "">
 <div class="container">
-<div class="button1">
-  <button class="button" id='button2'>new game</button>
-</div>
 <div class="buttons">
-  
-
-   <img src="http://icons.iconarchive.com/icons/ahmadhania/spherical/128/delete-icon.png" id="pick-button" class="button pick-button" onclick="playerPick('rock')" >
-
-  
-   <img src="http://icons.iconarchive.com/icons/ahmadhania/spherical/128/bomb-icon.png" id="pick-button" class="button pick-button" onclick="playerPick('rock')">
-
-  <img src="http://icons.iconarchive.com/icons/ahmadhania/spherical/128/burn-icon.png" id="pick-button" class="button pick-button" onclick="playerPick('scissors')">
+  <button class="button" id='button1'>new game</button>
+  <button id="pick-button" class="button pick-button" onclick="playerPick('rock')">rock</button>
+   
+  <button id="pick-button" class="button  pick-button" onclick="playerPick('paper')">paper</button>
+   
+  <button id="pick-button" class="button pick-button" onclick="playerPick('scissors')">scissors</button>
 </div>
   
 
@@ -44,7 +39,10 @@
     <hr>
     <div class="score">
       <table class="table">
-        
+        <thead>
+          <tr>
+            <th><h1>Game results</h1></th>
+          </tr>
 
           <tr>
             <th id="playerName"><h2>Player</h2></th>
