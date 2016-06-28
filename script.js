@@ -20,14 +20,16 @@ var round = 0;
  document.getElementById('playerName').innerHTML = "<h2>" +player.name + "</h2>";
 
 
-  document.getElementById("button2").onclick = newText; //start gry
+  document.getElementById("button1").onclick = newText; //start gry
 
 function newText() {
-  var el = document.getElementById("button2");
-// var buttons = document.getElementsByClassName("pick-button");
+  var el = document.getElementById("button1");
+var buttons = document.getElementsByClassName("pick-button");
   el.style.color = "red";
   el.style.fontSize = "35px";
-
+  for(var i = 0; i < buttons.length; i++) {
+    buttons[i].style.visibility = 'visible';
+  }
   
 }
 
@@ -101,15 +103,16 @@ function checkResult() {
   if  (computer.pick === "paper") { player.score++; gameResult = "Player wins!" }
   else if (computer.pick === "rock") { computer.score++; gameResult = "Computer wins!" }
   }
-  
+  console.log("to jest wybor komp : ", computer.pick); 
+  console.log("to jest moj wybor : ", player.pick);
+  console.log(gameResult);
   console.log('ja:' + player.score + " " + " wynik komp: " + computer.score);
   document.getElementById('computerPick').innerHTML = computer.pick;
   document.getElementById('playerPick').innerHTML = player.pick;
   document.getElementById('gameResult').innerHTML = gameResult;
-  // document.getElementById('playerScore').innerHTML = ;
-  // document.getElementById('computerScore').innerHTML =;
-  
-}  
+  document.getElementById('playerScore').innerHTML = gameResult;
+  document.getElementById('computerScore').innerHTML = gameResult;
+}
 
 
 
