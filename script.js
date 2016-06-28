@@ -110,8 +110,9 @@ function checkResult() {
   document.getElementById('computerPick').innerHTML = computer.pick;
   document.getElementById('playerPick').innerHTML = player.pick;
   document.getElementById('gameResult').innerHTML = gameResult;
-  document.getElementById('playerScore').innerHTML = gameResult;
-  document.getElementById('computerScore').innerHTML = gameResult;
+  document.getElementById('playerScore').innerHTML = player.score;
+  document.getElementById('computerScore').innerHTML = computer.score;
+  
 }
 
 
