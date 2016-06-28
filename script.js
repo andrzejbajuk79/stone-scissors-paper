@@ -10,7 +10,7 @@ var player = {
 };
 var round = 0;
 
-  computer.score = 0;
+ computer.score = 0;
   computer.pick = "";
   player.score = 0;
   player.pick = "";
@@ -18,14 +18,36 @@ var round = 0;
 
  player.name =prompt('what\'s ur name?');
  document.getElementById('playerName').innerHTML = "<h2>" +player.name + "</h2>";
-document.getElementById("button2").onclick = newText; //start gry
+
+
+  document.getElementById("button2").onclick = newText; //start gry
 
 function newText() {
   var el = document.getElementById("button2");
 // var buttons = document.getElementsByClassName("pick-button");
   el.style.color = "red";
   el.style.fontSize = "35px";
+
+  
 }
+
+
+//  document.getElementById('pick-button') = playerPick(pick); //bez onclick w index.html ????
+// function playerPick(pick).onclick {
+//   switch(player.pick = 'pick') {
+//   	case 0:
+//     player.pick = "rock";
+//     break;
+//     case 1:
+//     player.pick = "paper";
+//     break;
+//     case 2:
+//     player.pick = "scissors";
+//     break;
+
+//   }
+  
+// }
 
 function playerPick(pick) {
   player.pick = pick; 
@@ -37,9 +59,13 @@ function playerPick(pick) {
     document.getElementById("roundResult").innerHTML = "player wins the game!";
   } else {
     document.getElementById("roundResult").innerHTML = "computer wins the game!";
-    }
   }
 }
+}
+
+// var x = Math.random()*3;
+// Math.floor(x);
+
 
 function computerPick() {
   //random number between 0 and 3
@@ -74,7 +100,7 @@ function checkResult() {
 } else if (player.pick === "scissors") { //if player chooses scissors
   if  (computer.pick === "paper") { player.score++; gameResult = "Player wins!" }
   else if (computer.pick === "rock") { computer.score++; gameResult = "Computer wins!" }
-}
+  }
   
   console.log('ja:' + player.score + " " + " wynik komp: " + computer.score);
   document.getElementById('computerPick').innerHTML = computer.pick;
@@ -82,6 +108,7 @@ function checkResult() {
   document.getElementById('gameResult').innerHTML = gameResult;
   document.getElementById('playerScore').innerHTML = player.score;
   document.getElementById('computerScore').innerHTML =computer.score;
+  
 }  
 
 
