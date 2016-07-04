@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-pl">
-    
 <head>
     <meta charset="UTF-8">
-    
-
-
-         
     <title>Flexbox Holy Grail Demo</title>
-  
     <link rel="stylesheet" type="text/css" href="style.css">  
 </head>
 
  <body id = "">
 <div class="container">
 <div class="buttons">
-  <button class="button" id='button1'>new game</button>
-  <button id="pick-button" class="button pick-button" onclick="playerPick('rock')">rock</button>
-   
-  <button id="pick-button" class="button  pick-button" onclick="playerPick('paper')">paper</button>
-   
-  <button id="pick-button" class="button pick-button" onclick="playerPick('scissors')">scissors</button>
+   <img src="http://icons.iconarchive.com/icons/ahmadhania/spherical/128/delete-icon.png" id="pick-button" class="button pick-button" onclick="playerPick('rock')" >
+   <img src="http://icons.iconarchive.com/icons/ahmadhania/spherical/128/bomb-icon.png" id="pick-button" class="button pick-button" onclick="playerPick('rock')">
+  <img src="http://icons.iconarchive.com/icons/ahmadhania/spherical/128/burn-icon.png" id="pick-button" class="button pick-button" onclick="playerPick('scissors')">
 </div>
-  
-
   <div class="result">
     <h3>Current round</h3> <br>
     <hr>
     <p>Computer picked :  <span id="computerPick"></span> <br></p>
-
     <p>Player picked :  <span id="playerPick"></span> <br></p>
-
     <p>Result : <span id="gameResult"></span></p>
-
-    
        <p id="roundResult"></p>
     </div>
     <hr>
@@ -57,7 +42,6 @@
         </tbody>
       </table>
     </div>
- 
 </div>
 
 <script src="script.js">
