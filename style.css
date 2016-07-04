@@ -8,6 +8,10 @@
 	padding: 20px;
 
 }
+.buttons {
+	text-align: center;
+}
+
 .button {
 	padding:5px 10px ;
 	font-size: 15px;
@@ -19,14 +23,21 @@
 	font-weight: bold;
 	border: none;
 	cursor: pointer;
+
 }
-.button:hover {
-	color: teal;
-	background: lime;
+.button1 {
+	text-align: center;
 }
 .pick-button {
-	visibility: hidden;
+	
+	background: inherit;
 }
+#playerName {
+	width: 400px;
+}
+
+
+
 .result {
 	width: 50%;
 	margin: 0 auto;
@@ -35,6 +46,7 @@
 	text-transform: uppercase;
 	font-size: 30px;
 	margin-bottom: -15px;
+	text-align: center;
 }
 .result hr {
 	width: 100%;
