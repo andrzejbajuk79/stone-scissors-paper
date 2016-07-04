@@ -20,16 +20,14 @@ var round = 0;
  document.getElementById('playerName').innerHTML = "<h2>" +player.name + "</h2>";
 
 
-  document.getElementById("button1").onclick = newText; //start gry
+  document.getElementById("button2").onclick = newText; //start gry
 
 function newText() {
-  var el = document.getElementById("button1");
-var buttons = document.getElementsByClassName("pick-button");
+  var el = document.getElementById("button2");
+// var buttons = document.getElementsByClassName("pick-button");
   el.style.color = "red";
   el.style.fontSize = "35px";
-  for(var i = 0; i < buttons.length; i++) {
-    buttons[i].style.visibility = 'visible';
-  }
+
   
 }
 
@@ -58,9 +56,14 @@ function playerPick(pick) {
   if ( (player.score >= 10) || (computer.score >=10) ) {
   //log the result
   if (player.score > computer.score) {
+    document.getElementById("overlay").style.visibility = 'visible';
     document.getElementById("roundResult").innerHTML = "player wins the game!";
+    document.getElementById("final").src="https://d13yacurqjgara.cloudfront.net/users/526876/screenshots/2126713/lowpoly_yoda.jpg";
   } else {
+    document.getElementById("overlay").style.visibility = 'visible';
     document.getElementById("roundResult").innerHTML = "computer wins the game!";
+    document.getElementById("final").src="https://d13yacurqjgara.cloudfront.net/users/526876/screenshots/2126713/lowpoly_yoda.jpg";
+
   }
 }
 }
@@ -103,17 +106,15 @@ function checkResult() {
   if  (computer.pick === "paper") { player.score++; gameResult = "Player wins!" }
   else if (computer.pick === "rock") { computer.score++; gameResult = "Computer wins!" }
   }
-  console.log("to jest wybor komp : ", computer.pick); 
-  console.log("to jest moj wybor : ", player.pick);
-  console.log(gameResult);
+  
   console.log('ja:' + player.score + " " + " wynik komp: " + computer.score);
   document.getElementById('computerPick').innerHTML = computer.pick;
   document.getElementById('playerPick').innerHTML = player.pick;
   document.getElementById('gameResult').innerHTML = gameResult;
   document.getElementById('playerScore').innerHTML = player.score;
-  document.getElementById('computerScore').innerHTML = computer.score;
+  document.getElementById('computerScore').innerHTML =computer.score;
   
-}
+}  
 
 
 
